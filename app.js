@@ -13,6 +13,7 @@ const { isAuthenticated } = require('./middlewares/middleware.js');
 
 app.use(expressLayouts);
 app.use(express.json());
+app.use(express.static('public'))
 app.use('/todos', todoRoutes);
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
@@ -29,13 +30,15 @@ app.use('/', authRoutes);
 
 app.get('/', isAuthenticated, (req, res) => {
     res.render('index', {
-        layout: 'layouts/main-layout'
+        layout: 'layouts/main-layout',
+        showNavFootbar: true
     });
 });
 
 app.get('/contact', (req, res) => {
     res.render('contact', {
-        layout: 'layouts/main-layout'
+        layout: 'layouts/main-layout',
+        showNavFootbar: true
     });
 });
 
@@ -44,8 +47,22 @@ app.get('/todo-view', isAuthenticated, (req, res) => {
         if (err) return res.status(500).send('Internal Server Error');
         res.render('todo', {
             layout: 'layouts/main-layout',
-            todos: todos
+            todos: todos,
+            showNavFootbar: true
         });
+    });
+});
+
+app.get('/login', (req, res) => {
+    res.render('login', {
+        layout: 'layouts/main-layout',
+        showNavFootbar: false
+    });
+});
+app.get('/signup', (req, res) => {
+    res.render('signup', {
+        layout: 'layouts/main-layout',
+        showNavFootbar: false
     });
 });
 

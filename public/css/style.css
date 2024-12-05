@@ -1,0 +1,47 @@
+body{
+  background: rgb(13, 17, 23);
+  color: aliceblue;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.navbar{
+  background-color: rgb(33, 37, 41);
+  color: aliceblue;
+  padding: 5px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img{
+  border-radius: 50%;
+  margin: auto;
+}
+
+.navbar-nav .nav-link {
+  color: aliceblue;
+  padding: 0 15px; 
+}
+
+
+.nav-link:hover{
+  color: hsl(183, 47%, 85%);
+}
+.navbar-toggler{
+  color: transparent;
+  background-color: #5a5563;
+}
+.navbar-toggler:hover{
+  background-color: hsl(183, 47%, 85%);
+}
+
+.fot-c{
+  margin-top: 100px;
+  
+}
+.fot-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: aliceblue; 
+}

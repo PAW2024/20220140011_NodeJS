@@ -1,0 +1,38 @@
+
+.image-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin: 20px;
+    margin-left: 50px;
+    margin-right: auto;
+}
+
+#image1 {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    border-radius: 30% 2% 30% 2%;
+    box-shadow: 5px 5px 20px rgba(194, 193, 193, 0.6);
+}
+@media screen and (max-width: 800px) {
+    #image1{
+        content: url(/images/ft2.jpeg);
+    }
+}
+
+.bindx{
+    margin-top: 20px;
+}
+
+.btn{
+    color: aliceblue;
+    background-color: #5a5563;
+    border: none;
+}
+.btn:hover{
+    color: hsl(183, 47%, 85%);
+    background-color: #4e4b54;
+}

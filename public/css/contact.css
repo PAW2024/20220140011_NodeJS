@@ -1,0 +1,13 @@
+.cntct{
+    margin-top: 30px;
+}
+
+.frm-ct{
+    background-color: rgb(33, 37, 41);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.frm-ta{
+    resize: none;
+}
